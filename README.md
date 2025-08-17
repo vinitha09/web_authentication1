@@ -11,8 +11,12 @@ This is a Django-based web authentication system using facial recognition.
 
 # Create and activate virtual environemnt using anaconda
 conda create --name myenv 
+
 conda actiavte myenv
 
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Run command
+python manage.py runserve
