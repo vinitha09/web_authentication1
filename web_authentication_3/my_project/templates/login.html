@@ -1,0 +1,135 @@
+<html>
+
+<style>
+    h3{
+        align-items: center;
+        margin-left: 15px;
+        color: black;
+        padding-left: 15px;
+    }
+    #banner {
+        height: 8%;
+        width: 100%;
+        background-color: black;
+
+    }
+   
+
+    #banner_tag {
+        padding: 10px;
+        position: relative;
+        color: white;
+        margin-left: 35%;
+    }
+    #input {
+            position: relative;
+            margin-top: 5%;
+            width: 100%;
+            height: 75%;
+           
+       
+    }
+    h1#heading{
+        
+        padding-left: 20%;
+        padding-bottom: 3%;
+    }
+    #form_input {
+        position: relative;
+        margin-left: 25%;
+        padding-left: 10%;
+        width: 30%;
+        height: 70%;
+        padding-top: 2%;
+
+        padding-right: 5%;
+        border: 2px solid black;
+        
+    }
+    .form-control {
+        font-size: 15pt;
+        height: 30px;
+        width: calc(100% - 120px); /* Adjust width for input fields */
+    }
+    .form-group label {
+        color: black;
+        font-size: 15pt;
+        margin-bottom: 10px;
+        width: 100px; /* Set a fixed width for the labels */
+        display: inline-block;
+    }
+    
+    .footer {
+		height:8%;
+        margin-top: 0%;
+		width : 100%;
+		background-color:black;
+	}
+	   
+</style>
+
+<body>
+    <div id="banner" class="row fullscreen">
+        <h2 id="banner_tag">Welcome to My Website</h2>
+    </div>
+    <div id="input">
+       
+        <div id="form_input">
+            <form id="login-detail" action="{% url 'login.html' %}" method="POST">
+                {% csrf_token %}
+                <h1 id="heading">Login</h1>
+             
+                <div class="form-group" >
+                    
+                    <label for="username" style="color:black; font-size:15pt;margin-bottom:10px;">Username</label>
+                    <input type="username" class="form-control" name="username" style="font-size:15pt; height:30px;"  placeholder="Enter Username" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="gender" style="color:black; font-size:15pt; margin-bottom:10px;">Gender</label>
+                    <select class="form-control" name="gender" style="font-size: 15pt;height: 30px;" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <br>
+                <div class="form-group">
+                    <label for="password" style="color:black; font-size:15pt;margin-bottom:10px;">Password</label>
+                    <input type="password" class="form-control" name="password" style="font-size:15pt; height:30px;"  placeholder="Password" required>
+                </div> 
+                <br>
+                <input  class="btn btn-success" type="submit" value="Log in" style="font-size: 15pt;">
+                <p style="font-size: 15pt;">Don't have an account? <a href="register" style="text-decoration: none;">Register</a></p>
+               
+                
+                
+               
+            </form>
+        </div>
+    </div>
+    <footer class="footer" id="contact-us">
+        <div class="footer-align">
+            <h2 style="color:white;position:absolute; margin-left:45%; font-size: 25px; margin-bottom: 3%px;">Contact Us</h2>
+            <br/>
+        </div>
+    </footer>
+    
+    </body>
+    </html>
+<!-- //<div class="container">
+
+// <form action="{% url 'login.html' %}" method='POST'>
+//     {% csrf_token %}
+//     <label>Username</label>
+//     <input type="text" name="username" placeholder="username"/><br><br>
+//     <label>password</label>
+//     <input type="password" name="password" placeholder="password"/>
+//     <br>
+//     <br>
+
+//     <input type="submit"/>
+
+// </form>
+// </div> -->
