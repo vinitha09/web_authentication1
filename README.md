@@ -9,9 +9,9 @@ This is a Django-based web authentication system using facial recognition.
    git clone https://github.com/vinitha09/web_authentication.git
    cd web_authentication/my_project
 
-# Create and activate virtual environemnt using environment file
-python -m venv venv
-venv\Scripts\activate  # On Windows
+# Create and activate virtual environemnt using anaconda
+conda create --name myenv 
+conda actiavte myenv
 
 
 # Install dependencies
